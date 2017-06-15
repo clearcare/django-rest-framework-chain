@@ -50,7 +50,7 @@ setup(
     ],
     dependency_links=[
         'git+git@github.com:clearcare/django-rest-framework.git',
-    ]
+    ],
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
