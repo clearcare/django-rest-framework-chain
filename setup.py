@@ -45,7 +45,7 @@ setup(
     zip_safe=False,
     #test_suite='rest_framework.runtests.runtests.main',
     install_requires=[
-        '-e git+git@github.com:clearcare/django-rest-framework.git#egg=rest_framework',
+        'git+git@github.com:clearcare/django-rest-framework.git',
         'django-filter',
     ],
     classifiers=[
