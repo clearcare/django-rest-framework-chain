@@ -45,9 +45,12 @@ setup(
     zip_safe=False,
     #test_suite='rest_framework.runtests.runtests.main',
     install_requires=[
-        'git+ssh@github.com:clearcare/django-rest-framework.git',
+        'djangorestframework',
         'django-filter',
     ],
+    dependency_links=[
+        'git+git@github.com:clearcare/django-rest-framework.git',
+    ]
     classifiers=[
         'Development Status :: 5 - Production/Stable',
         'Environment :: Web Environment',
