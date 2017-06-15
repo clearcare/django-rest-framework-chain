@@ -45,7 +45,6 @@ setup(
     zip_safe=False,
     #test_suite='rest_framework.runtests.runtests.main',
     install_requires=[
-        'djangorestframework',
         'django-filter',
     ],
     dependency_links=[
