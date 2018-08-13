@@ -6,7 +6,7 @@ except ImportError:  # pragma: nocover
     # Django < 1.5 fallback
     from django.db.models.sql.constants import LOOKUP_SEP  # noqa
 from django.utils.datastructures import SortedDict
-from django.db.models.related import RelatedObject
+from django.db.models.fields.related import ManyToOneRel
 from django.utils import six
 
 import django_filters
@@ -57,7 +57,7 @@ class ChainedFilterSet(django_filters.FilterSet):
                 model = self._meta.model
                 field = get_model_field(model, filter_.name)
                 for lookup_type in LOOKUP_TYPES:
-                    if isinstance(field, RelatedObject):
+                    if isinstance(field, ManyToOneRel):
                         f = self.filter_for_reverse_field(field, filter_.name)
                     else:
                         f = self.filter_for_field(field, filter_.name)
