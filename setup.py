@@ -45,7 +45,7 @@ setup(
     zip_safe=False,
     #test_suite='rest_framework.runtests.runtests.main',
     install_requires=[
-        'djangorestframework',
+        'djangorestframework<3.9.4',
         'django-filter',
     ],
     classifiers=[
